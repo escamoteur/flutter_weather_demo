@@ -1,10 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:rxdart/rxdart.dart';
 
 import 'package:http/http.dart' as http;
 
-import 'weather_in_cities.dart';
+import 'json/weather_in_cities.dart';
 
 
 typedef void InputChange(String); 
@@ -20,15 +19,11 @@ typedef void InputChange(String);
 
 
     // Callback function that will be registered to the TextFields OnChanged Event
-    InputChange  OnFilerEntryChanged; 
+    OnFilerEntryChanged(String s) => _InputSubject.add; 
 
 
     WeatherViewModel()
     {
-
-        // Convert Callback to Subject
-        OnFilerEntryChanged = (s) => _InputSubject.add(s);
-
         _InputSubject.observable
           .debounce( new Duration(milliseconds: 500))
             .listen( (filterText)
