@@ -3,8 +3,8 @@ import "package:json_annotation/json_annotation.dart";
 part "weather_in_cities.g.dart";  
 
     @JsonSerializable()
-    class WeatherInCities extends Object with _$WeatherInCitiesSerializerMixIn
-    {
+    class WeatherInCities extends Object with _$WeatherInCitiesSerializerMixin
+    {                                   
         WeatherInCities(this.Cnt, this.Calctime, this.Cod, this.Cities);
 
 
@@ -20,11 +20,11 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'list')
         final List<City> Cities ;
 
-        factory WeatherInCities.fromJson(Map<String,dynamic> json) => _$WeatherInCities(json);
+        factory WeatherInCities.fromJson(Map<String,dynamic> json) => _$WeatherInCitiesFromJson(json);
     }
 
     @JsonSerializable()
-    class City extends Object with _$CitySerializerMixIn
+    class City extends Object with _$CitySerializerMixin
     {
 
         City(this.Id, this.coord, this.clouds, this.Dt, this.Name, this.main, this.rain, this.weather, this.wind);
@@ -57,13 +57,13 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'wind')
         final Wind wind ;
 
-        factory City.fromJson(Map<String,dynamic> json) => _$City(json);
+        factory City.fromJson(Map<String,dynamic> json) => _$CityFromJson(json);
 
 
     }
 
     @JsonSerializable()
-    class Coord extends Object with _$CoordSerializerMixIn
+    class Coord extends Object with _$CoordSerializerMixin
     {
         Coord(this.Lat, this.Lon);
 
@@ -73,12 +73,12 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'Lon')
         final double Lon ;
 
-        factory Coord.fromJson(Map<String,dynamic> json) => _$Coord(json);
+        factory Coord.fromJson(Map<String,dynamic> json) => _$CoordFromJson(json);
 
     }
 
     @JsonSerializable()
-    class Clouds extends Object with _$CloudsSerializerMixIn
+    class Clouds extends Object with _$CloudsSerializerMixin
     {
 
         Clouds(this.Today);
@@ -86,12 +86,12 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'today')
         final int Today ;
 
-        factory Clouds.fromJson(Map<String,dynamic> json) => _$Clouds(json);
+        factory Clouds.fromJson(Map<String,dynamic> json) => _$CloudsFromJson(json);
 
     }
 
     @JsonSerializable()
-    class Main extends Object with _$MainSerializerMixIn
+    class Main extends Object with _$MainSerializerMixin
     {
         Main(this.SeaLevel, this.Humidity, this.GrndLevel, this.Pressure, this.TempMax, this.Temp, this.TempMin); 
 
@@ -119,12 +119,12 @@ part "weather_in_cities.g.dart";
 
 
 
-        factory Main.fromJson(Map<String,dynamic> json) => _$Main(json);
+        factory Main.fromJson(Map<String,dynamic> json) => _$MainFromJson(json);
     
     }
 
     @JsonSerializable()
-    class Rain extends Object with _$RainSerializerMixIn
+    class Rain extends Object with _$RainSerializerMixin
     {
 
         Rain(this.The3h);
@@ -132,12 +132,12 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: '3h')
         final double The3h ;
 
-        factory RainCities.fromJson(Map<String,dynamic> json) => _$Rain(json);
+        factory Rain.fromJson(Map<String,dynamic> json) => _$RainFromJson(json);
 
     }
 
     @JsonSerializable()
-    class Weather extends Object with _$WeatherSerializerMixIn
+    class Weather extends Object with _$WeatherSerializerMixin
     {
 
         Weather(this.Icon, this.Description, this.Id, this.Main);
@@ -154,13 +154,13 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'main')
         final String Main ;
 
-        factory Weather.fromJson(Map<String,dynamic> json) => _$Weather(json);
+        factory Weather.fromJson(Map<String,dynamic> json) => _$WeatherFromJson(json);
 
 
     }
 
     @JsonSerializable()
-    class Wind extends Object with _$WindSerializerMixIn
+    class Wind extends Object with _$WindSerializerMixin
     {
         Wind(this.Deg, this.Speed);
 
@@ -170,6 +170,6 @@ part "weather_in_cities.g.dart";
         @JsonKey(name: 'speed')
         final double Speed ;
 
-        factory Wind.fromJson(Map<String,dynamic> json) => _$Wind(json);
+        factory Wind.fromJson(Map<String,dynamic> json) => _$WindFromJson(json);
         
     }
