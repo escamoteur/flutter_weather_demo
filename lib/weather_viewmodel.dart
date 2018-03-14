@@ -1,7 +1,6 @@
-import 'dart:async';
 import 'dart:convert';
 import 'package:rxdart/rxdart.dart';
-import 'dart:io';
+
 import 'package:http/http.dart' as http;
 
 import 'weather_in_cities.dart';
@@ -12,6 +11,8 @@ import 'weather_in_cities.dart';
     final _weatherSubject = new BehaviorSubject<List<WeatherEntry>>() ;
 
     Observable<List<WeatherEntry>> get WeatherStream  => _weatherSubject.observable;
+
+
 
     update()
     {
@@ -29,21 +30,30 @@ import 'weather_in_cities.dart';
                     if (data.statusCode == 200)
                     {
                         return new WeatherInCities.fromJson(JSON.decode(data.body)).Cities
-                          .map((city) => new WeatherEntry(city.Name))
-                            .toList();
-                    }
-                    else
-                    {
-                      return null;
-                    }           
-              }));
-     
-     }
-  }
+                          .map((city) => new WeatherEntry(city.Name, getIconURL(city)))
+                                                      .toList();
+                                              }
+                                              else
+                                              {
+                                                return null;
+                                              }           
+                                        }));
+                               
+                               }
 
+
+          String getIconURL(City city) {
+              return city.weather != Null ?  "http://openweathermap.org/img/w/${city.weather[0].Icon}.png" :  null;
+          }
+
+ 
+    }
+                          
+ 
 
 class WeatherEntry {
   final String city;
+  final String iconURL;
 
-  WeatherEntry(this.city);
+  WeatherEntry(this.city, this.iconURL);
 }

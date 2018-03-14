@@ -30,9 +30,15 @@ class WeatherListView extends StatelessWidget {
     }            
                   
     Widget buildRow(BuildContext context, int index, List<WeatherEntry> listData) {
-      return new ListTile(
-        title: new Text(listData[index].city),
-      );
+      return 
+        new Row(crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>
+              [
+                new Image(image: new NetworkImage(listData[index].iconURL)),
+                new Text(listData[index].city, style: new TextStyle(fontSize: 20.0))
+              ],);
+        
+      
     }
 }
       
