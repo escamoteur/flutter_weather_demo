@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 import 'weather_viewmodel.dart';
 
 class WeatherListView extends StatelessWidget {
 
-  final WeatherViewModel  model;
 
-  WeatherListView(this.model);
-  
+  WeatherListView();
     @override
     Widget build(BuildContext context) {
       return new StreamBuilder<List<WeatherEntry>>(
-              stream: model.WeatherStream,
+              stream: TheViewModel.of(context).WeatherStream,   //We access our ViewModel through the inherited Widget
               builder: (BuildContext context, AsyncSnapshot<List<WeatherEntry>> snapshot)  {
                           if (snapshot.hasData && snapshot.data.length > 0)
                           {

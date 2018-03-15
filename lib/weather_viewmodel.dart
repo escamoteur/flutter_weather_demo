@@ -6,8 +6,6 @@ import 'package:http/http.dart' as http;
 import 'json/weather_in_cities.dart';
 
 
-typedef void InputChange(String); 
-
   class WeatherViewModel {
   
 
@@ -19,11 +17,13 @@ typedef void InputChange(String);
 
 
     // Callback function that will be registered to the TextFields OnChanged Event
-    OnFilerEntryChanged(String s) => _InputSubject.add; 
+    OnFilerEntryChanged(String s) => _InputSubject.add(s); 
 
 
     WeatherViewModel()
     {
+        update();
+
         _InputSubject.observable
           .debounce( new Duration(milliseconds: 500))
             .listen( (filterText)
