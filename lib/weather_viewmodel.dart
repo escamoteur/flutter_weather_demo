@@ -49,31 +49,38 @@ import 'json/weather_in_cities.dart';
                 if (data.statusCode == 200)
                     {
                         return new WeatherInCities.fromJson(JSON.decode(data.body)).Cities
-                          .where( (city) =>  filtertext.isEmpty || city.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
-                            .map((city) => new WeatherEntry(city.Name, getIconURL(city)))
-                                                        .toList();
-                                                }
-                                                else
-                                                {
-                                                  return null;
-                                                }           
-                                          }));
-                                
-                                }
-
-
-          String getIconURL(City city) {
-              return city.weather != Null ?  "http://openweathermap.org/img/w/${city.weather[0].Icon}.png" :  null;
-          }
-
+                          .where( (weatherInCity) =>  filtertext.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
+                            .map((weatherInCity) => new WeatherEntry(weatherInCity) )
+                              .toList();
+                          }
+                          else
+                          {
+                            return null;
+                          }           
+             }));
+          
+        }
  
     }
                           
  
 
 class WeatherEntry {
-  final String city;
-  final String iconURL;
+   String cityName;
+   String iconURL;
+   double wind;
+   double rain;
+   double temperature;
+   String description;
 
-  WeatherEntry(this.city, this.iconURL);
+  WeatherEntry(City city)
+  {
+      this.cityName = city.Name;
+      this.iconURL = city.weather != null ?  "http://openweathermap.org/img/w/${city.weather[0].Icon}.png" :  null;
+      this.description = city.weather != null ?  city.weather[0].Description : null;
+      this.wind =city.wind.Speed;
+      this.rain = rain;
+      this.temperature = city.main.Temp;
+
+  }
 }
