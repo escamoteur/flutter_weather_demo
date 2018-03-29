@@ -31,8 +31,9 @@ import 'main.dart';
                       new WeatherListView()),  // Have to wrap the ListView into an Expanded otherwise the Column throws an exception
                 
                 new Padding(padding: const EdgeInsets.all(8.0),child: 
-                      new MaterialButton(
-                              child: new Text("Update"),
+                      new MaterialButton(                               
+                              child: 
+                                new Text("Update"), // Watch the Button is again a composition
                               color: new Color.fromARGB(255, 33, 150, 243),
                               textColor: new Color.fromARGB(255, 255, 255, 255),
                               onPressed: TheViewModel.of(context).update

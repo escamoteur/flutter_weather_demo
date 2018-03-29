@@ -18,87 +18,58 @@ class DetailPage extends StatelessWidget
                           child: 
                     new Column(children: <Widget>
                     [
-                      new Row(
-                        children: <Widget>[
-                          new Expanded(child: 
+                      // Top row City name + weather
+                      new Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>
+                        [
+                          new Text(weatherEntry.cityName,
+                                    style: new TextStyle(fontSize: 35.0),),
 
-                            new Text(weatherEntry.cityName,
-                                      style: new TextStyle(fontSize: 35.0),),),
-
-                            new Image.network(weatherEntry.iconURL,
-                                      alignment: Alignment.center,
-                                      scale: 1.0,
-                                      repeat: ImageRepeat.noRepeat,
-                                      width: 120.0,
-                                      height: 120.0,
-                                      fit: BoxFit.contain,)
+                          new Image.network(weatherEntry.iconURL,
+                                    alignment: Alignment.center,
+                                    scale: 1.0,
+                                    repeat: ImageRepeat.noRepeat,
+                                    width: 120.0,
+                                    height: 120.0,
+                                    fit: BoxFit.contain,)
                         ],
                       ),
-                     new Padding(
-                       padding: const EdgeInsets.only(bottom: 10.0),
-                       child: new Row(
-                          children: <Widget>
-                          [
-                                new Expanded(flex: 1,
-                                         child: new Text("Condition:",
-                                                          style: new TextStyle(fontSize: 20.0),),
-                                ),
-                                new Expanded(flex: 1,
-                                              child: 
-
-                                    new Text(weatherEntry.description,
-                                              style: new TextStyle(fontSize: 20.0),
-                                              textAlign: TextAlign.start,
-                                              ),
-                                              ),
-                         ]),
-                     ),
-                     new Padding(
-                       padding: const EdgeInsets.only(bottom: 10.0),
-                       child: new Row(
-                          children: <Widget>
-                          [
-                                new Expanded(flex: 1,
-                                         child: new Text("Temperature:",
-                                                          style: new TextStyle(fontSize: 20.0),),
-                                ),
-                                new Expanded(flex: 1,
-                                              child: 
-
-                                    new Text(weatherEntry.temperature.toStringAsFixed(1) + "°",
-                                              style: new TextStyle(fontSize: 20.0),
-                                              textAlign: TextAlign.start,
-                                              ),
-                                              ),
-                         ]),
-                     ),
-                     new Padding(
-                       padding: const EdgeInsets.only(bottom: 10.0),
-                       child: new Row(
-                          children: <Widget>
-                          [
-                                new Expanded(flex: 1,
-                                         child: new Text("Wind:",
-                                                          style: new TextStyle(fontSize: 20.0),),
-                                ),
-                                new Expanded(flex: 1,
-                                              child: 
-
-                                    new Text(weatherEntry.wind.toStringAsFixed(1) + " m/s",
-                                              style: new TextStyle(fontSize: 20.0),
-                                              textAlign: TextAlign.start,
-                                              ),
-                                              ),
-                         ]),
-                     ),
-
-                     
+                      buildConditionRow("condition", weatherEntry.description),
+                      
+                      buildConditionRow("Temperature", weatherEntry.temperature.toStringAsFixed(1) + "°"),
+                      
+                      buildConditionRow("Wind", weatherEntry.wind.toStringAsFixed(1) + " m/s"),                   
 
                     ],
-                    )
+                  )
                 )
       );
                     
+  }
+
+  Widget buildConditionRow(String condition, String description)
+  {
+    return
+        new Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: new Row( 
+            children: <Widget>
+            [
+                  new Expanded(flex: 1,
+                            child: 
+                          new Text(condition,
+                                   style: new TextStyle(fontSize: 20.0),),
+                  ),
+
+                  new Expanded(flex: 1,
+                                child: 
+                      new Text(description,
+                                style: new TextStyle(fontSize: 20.0),
+                                textAlign: TextAlign.start,
+                                ),
+                                ),
+            ]),
+        ); 
   }
   
 }

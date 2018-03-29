@@ -9,23 +9,25 @@ import 'json/weather_in_cities.dart';
   class WeatherViewModel {
   
 
-    final _weatherSubject = new BehaviorSubject<List<WeatherEntry>>() ;
-    final _InputSubject = new BehaviorSubject<String>() ;
+    final _newWeatherSubject = new BehaviorSubject<List<WeatherEntry>>() ;
+    final _inputSubject = new BehaviorSubject<String>() ;
 
 
-    Observable<List<WeatherEntry>> get WeatherStream  => _weatherSubject.observable;
+    Observable<List<WeatherEntry>> get newWeatherEvents  => _newWeatherSubject.observable;
 
 
     // Callback function that will be registered to the TextFields OnChanged Event
-    OnFilerEntryChanged(String s) => _InputSubject.add(s); 
+    OnFilerEntryChanged(String s) => _inputSubject.add(s); 
+
 
 
     WeatherViewModel()
     {
         update();
 
-        _InputSubject.observable
-          .debounce( new Duration(milliseconds: 500))
+        // initialize input listener for the Searchfield
+        _inputSubject.observable
+          .debounce( new Duration(milliseconds: 500))  // make sure we start processing if the user make a short pause 
             .listen( (filterText)
             {
               update( filtertext: filterText);
@@ -42,27 +44,18 @@ import 'json/weather_in_cities.dart';
 
       var httpStream = new Observable(http.get(url).asStream()); 
 
-        _weatherSubject.addStream(
+        _newWeatherSubject.addStream(
             httpStream
-            .handleError((error) {
-              print("Error");
-            })
-              .map( (data) 
-              {
-                if (data.statusCode == 200)
-                    {
-                        return new WeatherInCities.fromJson(JSON.decode(data.body)).Cities
-                          .where( (weatherInCity) =>  filtertext.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
-                            .map((weatherInCity) => new WeatherEntry(weatherInCity) )
-                              .toList();
-                          }
-                          else
-                          {
-                            return null;
-                          }           
-             }));
+              .where((data) => data.statusCode == 200)  // only continue if valid response
+                .map( (data) // convert JSON result in ModelObject
+                {
+                      return new WeatherInCities.fromJson(JSON.decode(data.body)).Cities
+                        .where( (weatherInCity) =>  filtertext.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
+                          .map((weatherInCity) => new WeatherEntry(weatherInCity) )
+                            .toList();
+                }));
           
-        }
+    }
  
     }
                           

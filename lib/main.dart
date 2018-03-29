@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 import 'homepage.dart';
-import 'listview.dart';
 import 'weather_viewmodel.dart';
 
 void main() => runApp(new MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new TheViewModel( 
-                  TheModel:  new WeatherViewModel(),child: 
+                  theModel:  new WeatherViewModel(),child: 
                   new MaterialApp(
                     title: 'Flutter Demo',
                     home: new HomePage()
@@ -28,23 +27,25 @@ class MyApp extends StatelessWidget {
 }
 
 
-
+// This might seem a bit odd
+// InheritedWidgets allow you to propagate values down the widgettree. 
+// it can then be accessed by just writing  TheViewModel.of(context)
 class TheViewModel extends InheritedWidget
 {
-  final WeatherViewModel TheModel;
+  final WeatherViewModel theModel;
 
   const TheViewModel({Key key, 
                       @required 
-                      this.TheModel, 
+                      this.theModel, 
                       @required 
-                      Widget child}) :  assert(TheModel != null),assert(child != null),
+                      Widget child}) :  assert(theModel != null),assert(child != null),
                       super(key: key, child: child);
 
-  static WeatherViewModel of(BuildContext context) => (context.inheritFromWidgetOfExactType(TheViewModel)as TheViewModel).TheModel;                  
+  static WeatherViewModel of(BuildContext context) => (context.inheritFromWidgetOfExactType(TheViewModel)as TheViewModel).theModel;                  
 
 
   @override
-  bool updateShouldNotify(TheViewModel oldWidget) => TheModel != oldWidget.TheModel;
+  bool updateShouldNotify(TheViewModel oldWidget) => theModel != oldWidget.theModel;
   
 }
 
