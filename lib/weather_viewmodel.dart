@@ -44,6 +44,9 @@ import 'json/weather_in_cities.dart';
 
         _weatherSubject.addStream(
             httpStream
+            .handleError((error) {
+              print("Error");
+            })
               .map( (data) 
               {
                 if (data.statusCode == 200)
