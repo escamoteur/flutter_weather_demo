@@ -30,7 +30,7 @@ import 'main.dart';
                 new Expanded( child: 
                       new WeatherListView()),  // Have to wrap the ListView into an Expanded otherwise the Column throws an exception
                 
-                new Padding(padding: const EdgeInsets.all(8.0),child: 
+                new Padding(padding: const EdgeInsets.all(20.0),child: 
                       new MaterialButton(                               
                               child: 
                                 new Text("Update"), // Watch the Button is again a composition
