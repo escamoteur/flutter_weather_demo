@@ -1,6 +1,8 @@
 # flutter_weather_demo
 
-A new Flutter project.
+Small Flutter demo project.
+
+more on it in this [blog post](https://www.burkharts.net/apps/blog/flutter-the-new-kid-on-the-block/)
 
 ## Getting Started
 
