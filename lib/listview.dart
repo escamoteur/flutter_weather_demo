@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'detail_page.dart';
-import 'app_model.dart';
-import 'service_locator.dart';
+import 'package:flutter_weather_demo/app_model.dart';
+import 'package:flutter_weather_demo/service_locator.dart';
 
 class WeatherListView extends StatelessWidget {
 

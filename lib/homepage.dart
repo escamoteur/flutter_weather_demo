@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather_demo/app_model.dart';
-import 'service_locator.dart';
+import 'package:flutter_weather_demo/service_locator.dart';
+
 
 import 'listview.dart';
-import 'main.dart';
+
 
  
  class HomePage extends StatelessWidget
