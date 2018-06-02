@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_demo/app_model.dart';
+import 'service_locator.dart';
 
 import 'listview.dart';
 import 'main.dart';
@@ -24,7 +26,7 @@ import 'main.dart';
                               style: new TextStyle(
                                             fontSize: 20.0,
                                             color: new Color.fromARGB(255, 0, 0, 0)),
-                              onChanged: TheViewModel.of(context).OnFilerEntryChanged,),
+                              onChanged: sl<AppModel>().OnFilerEntryChanged,),
                 ),
 
                 new Expanded( child: 
@@ -35,7 +37,7 @@ import 'main.dart';
                               child: new Text("Update"),
                               color: new Color.fromARGB(255, 33, 150, 243),
                               textColor: new Color.fromARGB(255, 255, 255, 255),
-                              onPressed: TheViewModel.of(context).update
+                              onPressed: sl.get<AppModel>().update
                               ),
                 ),
                 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'weather_viewmodel.dart';
-
+import 'app_model.dart';
 
 class DetailPage extends StatelessWidget
 {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'detail_page.dart';
-import 'main.dart';
-import 'weather_viewmodel.dart';
+import 'app_model.dart';
+import 'service_locator.dart';
 
 class WeatherListView extends StatelessWidget {
 
@@ -10,7 +10,7 @@ class WeatherListView extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
       return new StreamBuilder<List<WeatherEntry>>(
-              stream: TheViewModel.of(context).WeatherStream,   //We access our ViewModel through the inherited Widget
+              stream: sl.get<AppModel>().WeatherStream,   //We access our ViewModel through the inherited Widget
               builder: (BuildContext context, AsyncSnapshot<List<WeatherEntry>> snapshot)  {
                           if (snapshot.hasData && snapshot.data.length > 0)
                           {
