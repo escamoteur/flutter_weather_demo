@@ -1,8 +1,3 @@
-# flutter_weather_demo
+This branch is the example project for the blog post on:
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+[https://www.burkharts.net/apps/blog/one-to-find-them-all-how-to-use-service-locators-with-flutter/](https://www.burkharts.net/apps/blog/one-to-find-them-all-how-to-use-service-locators-with-flutter/)
