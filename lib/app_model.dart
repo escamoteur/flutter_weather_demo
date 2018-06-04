@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:flutter_weather_demo/service_locator.dart';
+import 'package:flutter_weather_demo/services/weather_api.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'package:http/http.dart' as http;
@@ -41,24 +43,6 @@ class AppModel {
   }
 
   update({String filtertext = ""}) {
-    const String url =
-        "http://api.openweathermap.org/data/2.5/box/city?bbox=5,47,14,54,20&appid=27ac337102cc4931c24ba0b50aca6bbd";
-
-    var httpStream = new Observable(http.get(url).asStream());
-
-    _weatherSubject.addStream(httpStream.handleError((error) {
-      print("Error");
-    }).map((data) {
-      if (data.statusCode == 200) {
-        return new WeatherInCities.fromJson(JSON.decode(data.body))
-            .Cities
-            .where((weatherInCity) =>
-                filtertext.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
-            .map((weatherInCity) => new WeatherEntry(weatherInCity))
-            .toList();
-      } else {
-        return null;
-      }
-    }));
+    _weatherSubject.addStream( sl<WeatherAPI>().getWeatherEntries(filtertext));
   }
 }
