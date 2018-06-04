@@ -20,6 +20,7 @@ class WeatherAPIOpenWeatherMap implements WeatherAPI {
       print("Error");
     }).map((data) {
       if (data.statusCode == 200) {
+        print(data.body);
         return new WeatherInCities.fromJson(json.decode(data.body))
             .Cities
             .where((weatherInCity) =>
