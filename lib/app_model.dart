@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter_weather_demo/service_locator.dart';
 import 'package:flutter_weather_demo/services/weather_api.dart';
 import 'package:rxdart/rxdart.dart';
@@ -17,8 +16,11 @@ class WeatherEntry {
 
   WeatherEntry(City city) {
     this.cityName = city.Name;
-    this.iconURL = city.weather != null ? "http://openweathermap.org/img/w/${city.weather[0].Icon}.png" : null;
-    this.description = city.weather != null ? city.weather[0].Description : null;
+    this.iconURL = city.weather != null
+        ? "http://openweathermap.org/img/w/${city.weather[0].Icon}.png"
+        : null;
+    this.description =
+        city.weather != null ? city.weather[0].Description : null;
     this.wind = city.wind.Speed;
     this.rain = rain;
     this.temperature = city.main.Temp;
@@ -26,10 +28,10 @@ class WeatherEntry {
 }
 
 class AppModel {
-  final _weatherSubject = new BehaviorSubject<List<WeatherEntry>>();
-  final _InputSubject = new BehaviorSubject<String>();
+  final _weatherSubject = BehaviorSubject<List<WeatherEntry>>();
+  final _InputSubject = BehaviorSubject<String>();
 
-  Observable<List<WeatherEntry>> get WeatherStream => _weatherSubject;
+  Stream<List<WeatherEntry>> get WeatherStream => _weatherSubject;
 
   // Callback function that will be registered to the TextFields OnChanged Event
   OnFilerEntryChanged(String s) => _InputSubject.add(s);
@@ -37,12 +39,13 @@ class AppModel {
   AppModel() {
     update();
 
-    _InputSubject.debounce(new Duration(milliseconds: 500)).listen((filterText) {
+    _InputSubject.debounceTime(Duration(milliseconds: 500))
+        .listen((filterText) {
       update(filtertext: filterText);
     });
   }
 
   update({String filtertext = ""}) {
-    _weatherSubject.addStream( sl<WeatherAPI>().getWeatherEntries(filtertext));
+    _weatherSubject.addStream(sl<WeatherAPI>().getWeatherEntries(filtertext));
   }
 }

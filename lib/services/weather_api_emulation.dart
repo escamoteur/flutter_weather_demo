@@ -5,16 +5,18 @@ import 'package:flutter_weather_demo/app_model.dart';
 import 'package:flutter_weather_demo/json/weather_in_cities.dart';
 import 'package:flutter_weather_demo/services/weather_api.dart';
 
-
-
-
 class WeatherAPIEmulation implements WeatherAPI {
   Stream<List<WeatherEntry>> getWeatherEntries(String filterText) {
-        return new Stream.fromIterable([WeatherInCities.fromJson(json.decode(api_data))
-            .Cities
-            .where((weatherInCity) =>
-                filterText.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filterText.toUpperCase()))
-            .map((weatherInCity) => new WeatherEntry(weatherInCity)).toList()]);
+    return Stream.fromIterable([
+      WeatherInCities.fromJson(json.decode(api_data))
+          .Cities
+          .where((weatherInCity) =>
+              filterText.isEmpty ||
+              weatherInCity.Name.toUpperCase()
+                  .startsWith(filterText.toUpperCase()))
+          .map((weatherInCity) => WeatherEntry(weatherInCity))
+          .toList()
+    ]);
   }
 }
 

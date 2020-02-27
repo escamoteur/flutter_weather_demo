@@ -2,50 +2,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter_weather_demo/app_model.dart';
 import 'package:flutter_weather_demo/service_locator.dart';
 
-
 import 'listview.dart';
 
-
- 
- class HomePage extends StatelessWidget
- {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      return 
-         new Scaffold(
-            appBar: new AppBar(title: new Text("WeatherDemo")),
-            body: 
-              new Column(children: <Widget>
-              [
-               new Padding(padding: const EdgeInsets.all(5.0),child: 
-                      new TextField(
-                              autocorrect: false,
-                              decoration: new InputDecoration(
-                                                  hintText: "Filter cities",
-                                                  hintStyle: new TextStyle(color: new Color.fromARGB(150, 0, 0, 0)),
-                                                  ),
-                              style: new TextStyle(
-                                            fontSize: 20.0,
-                                            color: new Color.fromARGB(255, 0, 0, 0)),
-                              onChanged: sl<AppModel>().OnFilerEntryChanged,),
-                ),
-
-                new Expanded( child: 
-                      new WeatherListView()),  // Have to wrap the ListView into an Expanded otherwise the Column throws an exception
-                
-                new Padding(padding: const EdgeInsets.all(8.0),child: 
-                      new MaterialButton(
-                              child: new Text("Update"),
-                              color: new Color.fromARGB(255, 33, 150, 243),
-                              textColor: new Color.fromARGB(255, 255, 255, 255),
-                              onPressed: sl.get<AppModel>().update
-                              ),
-                ),
-                
-              ],
+    return Scaffold(
+      appBar: AppBar(title: Text("WeatherDemo")),
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: TextField(
+              autocorrect: false,
+              decoration: InputDecoration(
+                hintText: "Filter cities",
+                hintStyle:
+                    TextStyle(color: Color.fromARGB(150, 0, 0, 0)),
+              ),
+              style: TextStyle(
+                  fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
+              onChanged: sl<AppModel>().OnFilerEntryChanged,
             ),
-          );
+          ),
+
+          Expanded(
+              child:
+                  WeatherListView()), // Have to wrap the ListView into an Expanded otherwise the Column throws an exception
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: MaterialButton(
+                child: Text("Update"),
+                color: Color.fromARGB(255, 33, 150, 243),
+                textColor: Color.fromARGB(255, 255, 255, 255),
+                onPressed: sl.get<AppModel>().update),
+          ),
+        ],
+      ),
+    );
   }
-   
- }
- 
+}
