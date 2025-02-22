@@ -1,6 +1,6 @@
-import 'package:flutter_weather_demo/di.dart';
 import 'package:flutter_weather_demo/services/weather_api.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:watch_it/watch_it.dart';
 
 import 'json/weather_in_cities.dart';
 

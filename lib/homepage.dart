@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather_demo/app_model.dart';
-import 'package:flutter_weather_demo/di.dart';
-
+import 'package:watch_it/watch_it.dart';
 import 'listview.dart';
 
 class HomePage extends StatelessWidget {

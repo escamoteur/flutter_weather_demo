@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather_demo/app_model.dart';
-import 'package:flutter_weather_demo/di.dart';
+import 'package:watch_it/watch_it.dart';
 
 import 'detail_page.dart';
 
-class WeatherListView extends StatelessWidget {
+class WeatherListView extends WatchingWidget {
   WeatherListView();
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<List<WeatherEntry>>(
-        stream: di
-            .get<AppModel>()
-            .WeatherStream, //We access our ViewModel through the inherited Widget
-        builder:
-            (BuildContext context, AsyncSnapshot<List<WeatherEntry>> snapshot) {
-          if (snapshot.hasData && snapshot.data!.length > 0) {
-            return ListView.builder(
-                itemCount: snapshot.data!.length,
-                itemBuilder: (BuildContext context, int index) =>
-                    buildRow(context, index, snapshot.data!));
-          } else {
-            return Text("No items");
-          }
-        });
+    final snapshot = watchStream(
+      (AppModel model) => model.WeatherStream,
+    );
+    if (snapshot.hasData && snapshot.data!.length > 0) {
+      return ListView.builder(
+          itemCount: snapshot.data!.length,
+          itemBuilder: (BuildContext context, int index) =>
+              buildRow(context, index, snapshot.data!));
+    } else {
+      return Text("No items");
+    }
   }
 
   Widget buildRow(

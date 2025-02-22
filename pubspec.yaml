@@ -14,7 +14,7 @@ dependencies:
   rxdart : any
   json_annotation: any
   http: any
-  get_it: any
+  watch_it: any
 
 
 
