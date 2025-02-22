@@ -5,78 +5,68 @@ import 'package:http/http.dart' as http;
 
 import 'json/weather_in_cities.dart';
 
+class WeatherViewModel {
+  final _newWeatherSubject = BehaviorSubject<List<WeatherEntry>>();
+  final _inputSubject = BehaviorSubject<String>();
 
-  class WeatherViewModel {
-  
+  Stream<List<WeatherEntry>> get newWeatherEvents => _newWeatherSubject.stream;
 
-    final _newWeatherSubject = new BehaviorSubject<List<WeatherEntry>>() ;
-    final _inputSubject = new BehaviorSubject<String>() ;
+  // Callback function that will be registered to the TextFields OnChanged Event
+  OnFilerEntryChanged(String s) => _inputSubject.add(s);
 
+  WeatherViewModel() {
+    update();
 
-    Observable<List<WeatherEntry>> get newWeatherEvents  => _newWeatherSubject.observable;
+    // initialize input listener for the Searchfield
+    _inputSubject.stream
+        .debounceTime(Duration(
+            milliseconds:
+                500)) // make sure we start processing if the user make a short pause
+        .listen((filterText) {
+      update(filtertext: filterText);
+    });
+  }
 
+  update({String filtertext = ""}) {
+    const String url =
+        "http://api.openweathermap.org/data/2.5/box/city?bbox=5,47,14,54,20&appid=27ac337102cc4931c24ba0b50aca6bbd";
 
-    // Callback function that will be registered to the TextFields OnChanged Event
-    OnFilerEntryChanged(String s) => _inputSubject.add(s); 
+    var httpStream = (http.get(Uri.parse(url)).asStream());
 
-
-
-    WeatherViewModel()
-    {
-        update();
-
-        // initialize input listener for the Searchfield
-        _inputSubject.observable
-          .debounce( new Duration(milliseconds: 500))  // make sure we start processing if the user make a short pause 
-            .listen( (filterText)
+    _newWeatherSubject.addStream(httpStream
+        .where(
+            (data) => data.statusCode == 200) // only continue if valid response
+        .map((data) // convert JSON result in ModelObject
             {
-              update( filtertext: filterText);
-            });  
-    }
-
-
-
-    update({String filtertext = ""})
-    {
-        
-      const String url = "http://api.openweathermap.org/data/2.5/box/city?bbox=5,47,14,54,20&appid=27ac337102cc4931c24ba0b50aca6bbd";  
-      
-
-      var httpStream = new Observable(http.get(url).asStream()); 
-
-        _newWeatherSubject.addStream(
-            httpStream
-              .where((data) => data.statusCode == 200)  // only continue if valid response
-                .map( (data) // convert JSON result in ModelObject
-                {
-                      return new WeatherInCities.fromJson(JSON.decode(data.body)).Cities
-                        .where( (weatherInCity) =>  filtertext.isEmpty || weatherInCity.Name.toUpperCase().startsWith(filtertext.toUpperCase()))
-                          .map((weatherInCity) => new WeatherEntry(weatherInCity) )
-                            .toList();
-                }));
-          
-    }
- 
-    }
-                          
- 
+      return WeatherInCities.fromJson(json.decode(data.body))
+          .cities
+          .where((weatherInCity) =>
+              filtertext.isEmpty ||
+              weatherInCity.name
+                  .toUpperCase()
+                  .startsWith(filtertext.toUpperCase()))
+          .map((weatherInCity) => WeatherEntry(weatherInCity))
+          .toList();
+    }));
+  }
+}
 
 class WeatherEntry {
-   String cityName;
-   String iconURL;
-   double wind;
-   double rain;
-   double temperature;
-   String description;
+  late String cityName;
+  String? iconURL;
+  late double wind;
+  late double rain;
+  late double temperature;
+  String? description;
 
-  WeatherEntry(City city)
-  {
-      this.cityName = city.Name;
-      this.iconURL = city.weather != null ?  "http://openweathermap.org/img/w/${city.weather[0].Icon}.png" :  null;
-      this.description = city.weather != null ?  city.weather[0].Description : null;
-      this.wind =city.wind.Speed;
-      this.rain = rain;
-      this.temperature = city.main.Temp;
-
+  WeatherEntry(City city) {
+    this.cityName = city.name;
+    this.iconURL = city.weather[0].icon != null
+        ? "https://openweathermap.org/img/w/${city.weather[0].icon}.png"
+        : null;
+    this.description = city.weather[0].description;
+    this.wind = city.wind.speed.toDouble();
+    this.rain = city.rain;
+    this.temperature = city.main.temp;
   }
 }

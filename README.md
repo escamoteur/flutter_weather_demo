@@ -2,7 +2,7 @@
 
 Small Flutter demo project.
 
-more on it in this [blog post](https://www.burkharts.net/apps/blog/flutter-the-new-kid-on-the-block/)
+more on it in this [blog post](https://www.burkharts.net/apps/blog/flutter-the--kid-on-the-block/)
 
 ## Getting Started
 
