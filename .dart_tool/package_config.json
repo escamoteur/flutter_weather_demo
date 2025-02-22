@@ -3,396 +3,405 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/_fe_analyzer_shared-1.0.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-67.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "3.0"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/analyzer-0.39.4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-6.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.0"
     },
     {
       "name": "args",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/args-1.5.2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.6.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "async",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.4.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "boolean_selector",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "build",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build-1.2.2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build-2.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.19"
     },
     {
       "name": "build_config",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build_config-0.4.2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build_config-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.14"
     },
     {
       "name": "build_daemon",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build_daemon-2.1.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build_daemon-4.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.4"
     },
     {
       "name": "build_resolvers",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build_resolvers-1.3.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.2",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "3.0"
     },
     {
       "name": "build_runner",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build_runner-1.7.4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner-2.4.11",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.4"
     },
     {
       "name": "build_runner_core",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/build_runner_core-4.4.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner_core-7.3.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.4"
     },
     {
       "name": "built_collection",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/built_collection-4.3.2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/built_collection-5.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.12"
     },
     {
       "name": "built_value",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/built_value-7.0.9",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.9.3",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "3.0"
     },
     {
-      "name": "charcode",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/charcode-1.1.3",
+      "name": "characters",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "checked_yaml",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/checked_yaml-1.0.2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.19"
     },
     {
       "name": "code_builder",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/code_builder-3.2.1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/code_builder-4.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.0"
     },
     {
       "name": "collection",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/collection-1.14.11",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.18"
     },
     {
       "name": "convert",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/convert-2.1.1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.2",
       "packageUri": "lib/",
-      "languageVersion": "1.17"
+      "languageVersion": "3.4"
     },
     {
       "name": "crypto",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/crypto-2.1.4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.6",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
-    },
-    {
-      "name": "csslib",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/csslib-0.16.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.4"
     },
     {
       "name": "dart_style",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/dart_style-1.3.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.6",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "fixnum",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/fixnum-0.10.11",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.1"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///C:/Entwicklung/Flutter/packages/flutter",
+      "rootUri": "file:///C:/Entwicklung/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "frontend_server_client",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "get_it",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/get_it-4.0.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/get_it-8.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.0"
     },
     {
       "name": "glob",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/glob-1.2.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.3",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.3"
     },
     {
       "name": "graphs",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/graphs-0.2.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "html",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/html-0.14.0+3",
-      "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "3.4"
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http-0.12.0+4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.4"
+      "languageVersion": "3.4"
     },
     {
       "name": "http_multi_server",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http_multi_server-2.2.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/http_multi_server-3.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http_parser-3.1.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "io",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/io-0.3.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.5",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "js",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/js-0.6.1+1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.7.1",
       "packageUri": "lib/",
-      "languageVersion": "1.19"
+      "languageVersion": "3.1"
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/json_annotation-3.0.1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.0"
     },
     {
       "name": "json_serializable",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/json_serializable-3.2.5",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/json_serializable-6.8.0",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.0"
     },
     {
       "name": "logging",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/logging-0.11.4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/logging-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/matcher-0.12.6",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "material_color_utilities",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/meta-1.1.8",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
       "packageUri": "lib/",
-      "languageVersion": "1.12"
+      "languageVersion": "2.12"
     },
     {
       "name": "mime",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/mime-0.9.6+3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "node_interop",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/node_interop-1.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "node_io",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/node_io-1.0.1+2",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "package_config",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/package_config-1.9.1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
-    },
-    {
-      "name": "package_resolver",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/package_resolver-1.0.10",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.4"
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/path-1.6.4",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "pedantic",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "3.0"
     },
     {
       "name": "pool",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pool-1.4.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/pool-1.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "pub_semver",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pub_semver-1.4.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.1.5",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "pubspec_parse",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pubspec_parse-0.1.5",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/pubspec_parse-1.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
-    },
-    {
-      "name": "quiver",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.1.2+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "rxdart",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/rxdart-0.23.1",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.12"
     },
     {
       "name": "shelf",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/shelf-0.7.5",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "shelf_web_socket",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/shelf_web_socket-0.2.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-2.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///C:/Entwicklung/Flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///C:/Entwicklung/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "1.11"
+      "languageVersion": "3.2"
     },
     {
       "name": "source_gen",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_gen-0.9.5",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/source_gen-1.5.0",
       "packageUri": "lib/",
-      "languageVersion": "2.5"
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "source_helper",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/source_helper-1.3.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_span-1.6.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stack_trace-1.9.3",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
-      "languageVersion": "1.23"
+      "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stream_channel-2.0.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.19"
     },
     {
       "name": "stream_transform",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/stream_transform-1.2.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/stream_transform-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "3.1"
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/string_scanner-1.0.5",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/term_glyph-1.1.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "1.8"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "test_api",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "timing",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/timing-0.1.1+2",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/timing-1.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "3.4"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/typed_data-1.1.6",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/vector_math-2.0.8",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.14"
     },
     {
       "name": "watcher",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/watcher-0.9.7+13",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "web_socket",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket-0.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "web_socket_channel",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/web_socket_channel-1.1.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-3.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "yaml",
-      "rootUri": "file:///C:/Users/escam/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/yaml-2.2.0",
+      "rootUri": "file:///C:/Users/escam/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.3",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "flutter_weather_demo",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "3.0"
     }
   ],
-  "generated": "2020-02-27T08:11:13.126346Z",
+  "generated": "2025-02-22T16:01:56.813791Z",
   "generator": "pub",
-  "generatorVersion": "2.7.0"
+  "generatorVersion": "3.4.1",
+  "flutterRoot": "file:///C:/Entwicklung/flutter",
+  "flutterVersion": "3.22.1",
+  "pubCache": "file:///C:/Users/escam/AppData/Local/Pub/Cache"
 }

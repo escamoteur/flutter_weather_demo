@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_demo/service_locator.dart';
+import 'package:flutter_weather_demo/di.dart';
 
 import 'homepage.dart';
 

@@ -9,10 +9,11 @@ class WeatherAPIEmulation implements WeatherAPI {
   Stream<List<WeatherEntry>> getWeatherEntries(String filterText) {
     return Stream.fromIterable([
       WeatherInCities.fromJson(json.decode(api_data))
-          .Cities
+          .cities
           .where((weatherInCity) =>
               filterText.isEmpty ||
-              weatherInCity.Name.toUpperCase()
+              weatherInCity.name
+                  .toUpperCase()
                   .startsWith(filterText.toUpperCase()))
           .map((weatherInCity) => WeatherEntry(weatherInCity))
           .toList()

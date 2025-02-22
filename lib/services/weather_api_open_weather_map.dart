@@ -11,7 +11,7 @@ class WeatherAPIOpenWeatherMap implements WeatherAPI {
     const String url =
         "http://api.openweathermap.org/data/2.5/box/city?bbox=5,47,14,54,20&appid=27ac337102cc4931c24ba0b50aca6bbd";
 
-    var httpStream = http.get(url).asStream();
+    var httpStream = http.get(Uri.parse(url)).asStream();
 
     return httpStream.handleError((error) {
       print("Error");
@@ -19,15 +19,16 @@ class WeatherAPIOpenWeatherMap implements WeatherAPI {
       if (data.statusCode == 200) {
         print(data.body);
         return WeatherInCities.fromJson(json.decode(data.body))
-            .Cities
+            .cities
             .where((weatherInCity) =>
                 filterText.isEmpty ||
-                weatherInCity.Name.toUpperCase()
+                weatherInCity.name
+                    .toUpperCase()
                     .startsWith(filterText.toUpperCase()))
             .map((weatherInCity) => WeatherEntry(weatherInCity))
             .toList();
       } else {
-        return null;
+        return [];
       }
     });
   }

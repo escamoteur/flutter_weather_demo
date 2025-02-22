@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_weather_demo/app_model.dart';
 
 class DetailPage extends StatelessWidget {
@@ -23,15 +22,17 @@ class DetailPage extends StatelessWidget {
                         style: TextStyle(fontSize: 35.0),
                       ),
                     ),
-                    Image.network(
-                      weatherEntry.iconURL,
-                      alignment: Alignment.center,
-                      scale: 1.0,
-                      repeat: ImageRepeat.noRepeat,
-                      width: 120.0,
-                      height: 120.0,
-                      fit: BoxFit.contain,
-                    )
+                    weatherEntry.iconURL == null
+                        ? SizedBox()
+                        : Image.network(
+                            weatherEntry.iconURL!,
+                            alignment: Alignment.center,
+                            scale: 1.0,
+                            repeat: ImageRepeat.noRepeat,
+                            width: 120.0,
+                            height: 120.0,
+                            fit: BoxFit.contain,
+                          )
                   ],
                 ),
                 Padding(
@@ -47,7 +48,7 @@ class DetailPage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Text(
-                        weatherEntry.description,
+                        weatherEntry.description ?? "",
                         style: TextStyle(fontSize: 20.0),
                         textAlign: TextAlign.start,
                       ),

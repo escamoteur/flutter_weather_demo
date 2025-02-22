@@ -1,29 +1,26 @@
-import 'package:flutter_weather_demo/service_locator.dart';
+import 'package:flutter_weather_demo/di.dart';
 import 'package:flutter_weather_demo/services/weather_api.dart';
 import 'package:rxdart/rxdart.dart';
-
-import 'package:http/http.dart' as http;
 
 import 'json/weather_in_cities.dart';
 
 class WeatherEntry {
-  String cityName;
-  String iconURL;
-  double wind;
-  double rain;
-  double temperature;
-  String description;
+  late String cityName;
+  String? iconURL;
+  late double wind;
+  late double rain;
+  late double temperature;
+  String? description;
 
   WeatherEntry(City city) {
-    this.cityName = city.Name;
-    this.iconURL = city.weather != null
-        ? "http://openweathermap.org/img/w/${city.weather[0].Icon}.png"
+    this.cityName = city.name;
+    this.iconURL = city.weather[0].icon != null
+        ? "https://openweathermap.org/img/w/${city.weather[0].icon}.png"
         : null;
-    this.description =
-        city.weather != null ? city.weather[0].Description : null;
-    this.wind = city.wind.Speed;
-    this.rain = rain;
-    this.temperature = city.main.Temp;
+    this.description = city.weather[0].description;
+    this.wind = city.wind.speed.toDouble();
+    this.rain = city.rain;
+    this.temperature = city.main.temp;
   }
 }
 
@@ -46,6 +43,6 @@ class AppModel {
   }
 
   update({String filtertext = ""}) {
-    _weatherSubject.addStream(sl<WeatherAPI>().getWeatherEntries(filtertext));
+    _weatherSubject.addStream(di<WeatherAPI>().getWeatherEntries(filtertext));
   }
 }

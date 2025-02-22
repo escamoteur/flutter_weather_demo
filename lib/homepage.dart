@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather_demo/app_model.dart';
-import 'package:flutter_weather_demo/service_locator.dart';
+import 'package:flutter_weather_demo/di.dart';
 
 import 'listview.dart';
 
@@ -17,12 +17,11 @@ class HomePage extends StatelessWidget {
               autocorrect: false,
               decoration: InputDecoration(
                 hintText: "Filter cities",
-                hintStyle:
-                    TextStyle(color: Color.fromARGB(150, 0, 0, 0)),
+                hintStyle: TextStyle(color: Color.fromARGB(150, 0, 0, 0)),
               ),
               style: TextStyle(
                   fontSize: 20.0, color: Color.fromARGB(255, 0, 0, 0)),
-              onChanged: sl<AppModel>().OnFilerEntryChanged,
+              onChanged: di<AppModel>().OnFilerEntryChanged,
             ),
           ),
 
@@ -36,7 +35,7 @@ class HomePage extends StatelessWidget {
                 child: Text("Update"),
                 color: Color.fromARGB(255, 33, 150, 243),
                 textColor: Color.fromARGB(255, 255, 255, 255),
-                onPressed: sl.get<AppModel>().update),
+                onPressed: di.get<AppModel>().update),
           ),
         ],
       ),
