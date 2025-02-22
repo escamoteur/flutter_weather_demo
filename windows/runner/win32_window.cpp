@@ -63,7 +63,7 @@ class WindowClassRegistrar {
   // Returns the singleton registrar instance.
   static WindowClassRegistrar* GetInstance() {
     if (!instance_) {
-      instance_ =  WindowClassRegistrar();
+      instance_ = new WindowClassRegistrar();
     }
     return instance_;
   }

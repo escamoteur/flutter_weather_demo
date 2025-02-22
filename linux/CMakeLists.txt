@@ -36,8 +36,8 @@ endif()
 
 # Compilation settings that should be applied to most targets.
 #
-# Be cautious about adding  options here, as plugins use this function by
-# default. In most cases, you should add  options to specific targets instead
+# Be cautious about adding new options here, as plugins use this function by
+# default. In most cases, you should add new options to specific targets instead
 # of modifying this function.
 function(APPLY_STANDARD_SETTINGS TARGET)
   target_compile_features(${TARGET} PUBLIC cxx_std_14)
@@ -59,7 +59,7 @@ add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
 # Define the application target. To change its name, change BINARY_NAME above,
 # not the value here, or `flutter run` will no longer work.
 #
-# Any  source files that you add to the application should be added here.
+# Any new source files that you add to the application should be added here.
 add_executable(${BINARY_NAME}
   "main.cc"
   "my_application.cc"
